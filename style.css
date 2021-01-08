@@ -97,7 +97,7 @@ header a:hover{
     padding: 4em;
     display: grid;
     justify-content: space-between;
-    grid-gap: 2em;
+    grid-gap: 4em 2em;
     grid-template-columns: repeat(auto-fit, 23em);
 }
 
@@ -174,17 +174,35 @@ footer p{
 
 @media(max-width: 880px){
     .hero{
+        padding: 0 2em;
         align-items: center;
     }
+
+    .hero h1{
+        font-size: 3.2rem;
+    }
+    
+    .hero p{
+        font-size: 1.2rem;
+        margin-bottom: 2em;
+    }
+    
+    .hero a{
+        padding: 0.5em 1.2em;
+        font-size: 1rem;
+    }
+
     .cards{
         text-align: center;
         grid-template-columns: 1fr;
     }
+    
     .contact{
         flex-direction: column;
         text-align: center;
         padding: 2em 0 6em;
     }
+    
     .contact img{
         width: 100%;
         margin: 0 0 4em;
