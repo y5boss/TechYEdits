@@ -1,0 +1,132 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&display=swap');
+
+:root{
+    --primary-color: #36a3eb;
+    --primary-dark: #287fb9;
+    --overlay: rgba(0,0,0,0.6);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Oswald', sans-serif;
+}
+
+a{
+    text-decoration: none;
+}
+
+header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    min-height: 4em;
+    padding: 0 4em;
+    background-color: var(--primary-color);
+    color: #fff;
+}
+
+header p{
+    font-size: 1.3rem;
+}
+
+header ul{
+    list-style-type: none;
+    display: flex;
+}
+
+header a{
+    display: inline-block;
+    color: #fff;
+    font-size: 1.2rem;
+    padding: 0 1em;
+    transform: scale(1);
+    transition: 300ms transform ease-in-out;
+}
+
+header a:hover{
+    transform: scale(1.15);
+}
+
+main{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: calc(100vh - 8em);
+    padding: 0 1em;
+}
+
+form{
+    width: 40em;
+    max-width: 100%;
+}
+
+label{
+    display: inline-block;
+    margin-bottom: 0.3em;
+    font-size: 1.2rem;
+}
+
+input, textarea{
+    outline: none;
+    font-size: 1rem;
+    margin-bottom: 1em;
+    border: 1px solid #888;
+    padding: 0.5em 0.6em;
+    width: 100%;
+}
+
+textarea{
+    resize: none;
+    height: 10em;
+}
+
+input:focus, textarea:focus{
+    border-color: var(--primary-color);
+}
+
+input[type='submit']{
+    border: none;
+    background-color: var(--primary-color);
+    color: #fff;
+    padding: 1em 0;
+    font-weight: bold;
+    cursor:pointer;
+}
+
+input[type='submit']:hover{
+    background-color: var(--primary-dark);
+}
+
+footer{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    min-height: 4em;
+    padding: 0 4em;
+    background-color: var(--primary-color);
+    color: #fff;
+}
+
+footer .icons, footer a{
+    display: flex;
+    align-items: center;
+    margin-right: 1.5em;
+    color: #fff;
+}
+
+footer ion-icon{
+    font-size: 1.8rem;
+    transform: scale(1);
+    transition: 300ms transform ease-in-out;
+}
+
+footer ion-icon:hover{
+    transform: scale(1.15);
+}
+
+footer p{
+    font-size: 0.9rem;
+}
