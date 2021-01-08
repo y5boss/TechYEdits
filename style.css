@@ -116,9 +116,8 @@ header a:hover{
 }
 
 .contact img{
-    width: 100%;
-    max-width: 40em;
-    margin-right: 4em;
+    width: 50%;
+    margin-right: 2em;
 }
 
 .contact h3{
@@ -173,11 +172,21 @@ footer p{
     font-size: 0.9rem;
 }
 
-@media(max-width: 1200px){
+@media(max-width: 880px){
+    .hero{
+        align-items: center;
+    }
+    .cards{
+        text-align: center;
+        grid-template-columns: 1fr;
+    }
     .contact{
         flex-direction: column;
+        text-align: center;
+        padding: 2em 0 6em;
     }
     .contact img{
-        margin: 0 0 1em;
+        width: 100%;
+        margin: 0 0 4em;
     }
 }
