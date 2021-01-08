@@ -83,6 +83,7 @@ header a:hover{
     outline: 1px solid var(--primary-color);
     outline-offset: -1px;
     background-color: transparent;
+    margin-left: 0.5em;
 }
 
 .hero .primary:hover{
