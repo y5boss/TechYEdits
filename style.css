@@ -97,7 +97,7 @@ header a:hover{
     padding: 4em;
     display: grid;
     justify-content: space-between;
-    grid-gap: 2em 0;
+    grid-gap: 2em;
     grid-template-columns: repeat(auto-fit, 23em);
 }
 
@@ -111,13 +111,14 @@ header a:hover{
 
 .contact{
     display: flex;
+    justify-content: center;
     padding: 2em 4em 6em;
 }
 
 .contact img{
     width: 100%;
     max-width: 40em;
-    margin-right: 2em;
+    margin-right: 4em;
 }
 
 .contact h3{
@@ -170,4 +171,13 @@ footer ion-icon:hover{
 
 footer p{
     font-size: 0.9rem;
+}
+
+@media(max-width: 1200px){
+    .contact{
+        flex-direction: column;
+    }
+    .contact img{
+        margin: 0 0 1em;
+    }
 }
