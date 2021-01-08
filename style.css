@@ -40,13 +40,12 @@ header a{
     display: inline-block;
     color: #fff;
     font-size: 1.2rem;
-    padding: 0 1em;
-    transform: scale(1);
-    transition: 300ms transform ease-in-out;
+    padding: 0.9em 1.2em;
+    transition: 300ms background ease-in-out;
 }
 
-header a:hover{
-    transform: scale(1.15);
+header a:hover, .current{
+    background-color: var(--primary-dark);
 }
 
 .hero{
