@@ -22,6 +22,11 @@ p{
 }
 
 header{
+    position: sticky;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 10;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -50,6 +55,23 @@ header a{
 
 header a:hover, .current{
     background-color: var(--primary-dark);
+}
+
+.lines{
+    display: none;
+    cursor: pointer;
+    padding: 0.3em;
+}
+
+.line{
+    width: 2.5em;
+    height: 0.3em;
+    background-color: #fff;
+    pointer-events: none;
+}
+
+.lines > * + *{
+    margin-top: 0.3em;
 }
 
 main{
@@ -135,11 +157,51 @@ footer p{
 }
 
 @media(max-width: 768px){
+    header{
+        padding: 0 2em;
+        text-align: center;
+    }
+
+    header ul{
+        display: none;
+    }
+
+    header a{
+        font-size: 1.5rem;
+        padding: 1em 0;
+        min-width: 10em;
+    }
+
+    .lines{
+        display: block;
+    }
+
+    .active{
+        position: fixed;
+        top: 4em;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-color: #333;
+    }
+
     main{
         padding: 2em 1em;
     flex-direction: column;
     }
     .card{
         margin: 0 0 1em;
+    }
+
+    footer ion-icon{
+        font-size: 1.6rem;
+    }
+
+    footer p{
+        font-size: 0.8rem;
     }
 }
