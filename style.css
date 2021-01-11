@@ -36,24 +36,24 @@ header{
     color: #fff;
 }
 
-header p{
+header a{
     font-size: 1.3rem;
+    color: #fff;
 }
 
-header ul{
+header nav ul{
     list-style-type: none;
     display: flex;
 }
 
-header a{
+header nav a{
     display: inline-block;
-    color: #fff;
     font-size: 1.2rem;
     padding: 0.9em 1.2em;
     transition: 300ms background ease-in-out;
 }
 
-header a:hover, .current{
+header nav a:hover, .current{
     background-color: var(--primary-dark);
 }
 
@@ -72,6 +72,11 @@ header a:hover, .current{
 
 .lines > * + *{
     margin-top: 0.3em;
+}
+
+.overlay img{
+    width: 30em;
+    max-width: 100%;
 }
 
 .hero{
@@ -128,6 +133,7 @@ header a:hover, .current{
 }
 
 .card h3{
+    font-size: 1.3rem;
     margin-bottom: 0.3em;
 }
 
@@ -180,8 +186,11 @@ footer{
 footer .icons, footer a{
     display: flex;
     align-items: center;
-    margin-right: 1.5em;
     color: #fff;
+}
+
+footer .icons > * + *{
+    margin-left: 1.5em;
 }
 
 footer ion-icon{
@@ -206,13 +215,17 @@ footer p{
     
     .contact{
         flex-direction: column;
-        text-align: center;
         padding: 2em 0 6em;
     }
     
     .contact img{
         width: 100%;
         margin: 0 0 4em;
+    }
+
+    .contact .content{
+        text-align: center;
+        padding: 0 2em;
     }
 }
 
@@ -222,11 +235,11 @@ footer p{
         text-align: center;
     }
 
-    header ul{
+    header nav ul{
         display: none;
     }
 
-    header a{
+    header nav a{
         font-size: 1.5rem;
         padding: 1em 0;
         min-width: 10em;
@@ -268,16 +281,25 @@ footer p{
         font-size: 1rem;
     }
 
+    .cards{
+        padding: 4em 2em;
+    }
+
     .contact h3{
         font-size: 1.8rem;
     }
     
     .contact p{
+        margin: 1em 0 2.2em;
         font-size: 1rem;
     }
 
     .contact a{
         font-size: 1rem;
+    }
+
+    footer{
+        padding: 0 2em;
     }
 
     footer ion-icon{
@@ -286,5 +308,59 @@ footer p{
 
     footer p{
         font-size: 0.8rem;
+    }
+}
+
+@media(max-width: 500px){
+    .hero h1{
+        font-size: 2.6rem;
+    }
+    
+    .hero p{
+        font-size: 1rem;
+    }
+    
+    .hero a{
+        font-size: 0.9rem;
+    }
+
+    .contact h3{
+        font-size: 1.6rem;
+    }
+    
+    .contact p, .contact a{
+        font-size: 0.9rem;
+    }
+
+    footer{
+        flex-direction: column;
+    }
+
+    footer .icons{
+        display: flex;
+        justify-content: center;
+        margin: 1em 0;
+    }
+
+    footer p{
+        margin: 0 0 1em;
+    }
+}
+
+@media(max-width: 425px){
+    header, .hero, .contact .content, footer{
+        padding: 0 1em;
+    }
+
+    .hero h1{
+        font-size: 2rem;
+    }
+    
+    .hero p{
+        font-size: 0.8rem;
+    }
+
+    .cards{
+        padding: 4em 1em;
     }
 }
