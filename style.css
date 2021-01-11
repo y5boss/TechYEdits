@@ -1,0 +1,376 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&display=swap');
+
+:root{
+    --primary-color: #36a3eb;
+    --primary-dark: #287fb9;
+    --overlay: rgba(0,0,0,0.6);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Oswald', sans-serif;
+}
+
+a{
+    text-decoration: none;
+}
+
+p{
+    line-height: 1.6;
+}
+
+header{
+    position: sticky;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    min-height: 4em;
+    padding: 0 4em;
+    background-color: var(--primary-color);
+    color: #fff;
+}
+
+header a{
+    font-size: 1.3rem;
+    color: #fff;
+}
+
+header nav ul{
+    list-style-type: none;
+    display: flex;
+}
+
+header nav a{
+    display: inline-block;
+    font-size: 1.2rem;
+    padding: 0.9em 1.2em;
+    transition: 300ms background ease-in-out;
+}
+
+header nav a:hover, .current{
+    background-color: var(--primary-dark);
+}
+
+.lines{
+    display: none;
+    cursor: pointer;
+    padding: 0.3em;
+}
+
+.line{
+    width: 2.5em;
+    height: 0.3em;
+    background-color: #fff;
+    pointer-events: none;
+}
+
+.lines > * + *{
+    margin-top: 0.3em;
+}
+
+.overlay img{
+    width: 30em;
+    max-width: 100%;
+}
+
+.hero{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    height: calc(100vh - 4em);
+    background: linear-gradient(var(--overlay), var(--overlay)), url('Images/Video_editing_close_up.jpg');
+    background-size: cover;
+    color: #fff;
+    padding: 0 4em;
+}
+
+.hero h1{
+    font-size: 3.5rem;
+    margin-bottom: 0.2em;
+}
+
+.hero p{
+    font-size: 1.5rem;
+    margin-bottom: 1.3em;
+}
+
+.hero a{
+    background-color: var(--primary-color);
+    color: #fff;
+    padding: 0.5em 1em;
+    font-size: 1.1rem;
+    transition: 300ms background ease-in-out;
+}
+
+.hero .secondary{
+    outline: 1px solid var(--primary-color);
+    outline-offset: -1px;
+    background-color: transparent;
+    margin-left: 0.5em;
+}
+
+.hero .primary:hover{
+    background-color: var(--primary-dark);
+}
+
+.hero .secondary:hover{
+    background-color: var(--primary-color);
+}
+
+.cards{
+    padding: 4em;
+    display: grid;
+    justify-content: space-between;
+    grid-gap: 4em 2em;
+    grid-template-columns: repeat(auto-fit, 23em);
+}
+
+.card h3{
+    font-size: 1.3rem;
+    margin-bottom: 0.3em;
+}
+
+.card p{
+    color: #444;
+}
+
+.contact{
+    display: flex;
+    justify-content: center;
+    padding: 2em 4em 6em;
+}
+
+.contact img{
+    width: 50%;
+    margin-right: 2em;
+}
+
+.contact h3{
+    font-size: 2rem;
+}
+
+.contact p{
+    font-size: 1.2rem;
+    margin: 0.5em 0 1.5em;
+}
+
+.contact a{
+    background-color: var(--primary-color);
+    color: #fff;
+    padding: 0.5em 1em;
+    font-size: 1.1rem;
+    transition: 300ms background ease-in-out;
+}
+
+.contact a:hover{
+    background-color: var(--primary-dark);
+}
+
+footer{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    min-height: 4em;
+    padding: 0 4em;
+    background-color: var(--primary-color);
+    color: #fff;
+}
+
+footer .icons, footer a{
+    display: flex;
+    align-items: center;
+    color: #fff;
+}
+
+footer .icons > * + *{
+    margin-left: 1.5em;
+}
+
+footer ion-icon{
+    font-size: 1.8rem;
+    transform: scale(1);
+    transition: 300ms transform ease-in-out;
+}
+
+footer ion-icon:hover{
+    transform: scale(1.15);
+}
+
+footer p{
+    font-size: 0.9rem;
+}
+
+@media(max-width: 880px){
+    .cards{
+        text-align: center;
+        grid-template-columns: 1fr;
+    }
+    
+    .contact{
+        flex-direction: column;
+        padding: 2em 0 6em;
+    }
+    
+    .contact img{
+        width: 100%;
+        margin: 0 0 4em;
+    }
+
+    .contact .content{
+        text-align: center;
+        padding: 0 2em;
+    }
+}
+
+@media(max-width: 768px){
+    header{
+        padding: 0 2em;
+        text-align: center;
+    }
+
+    header nav ul{
+        display: none;
+    }
+
+    header nav a{
+        font-size: 1.5rem;
+        padding: 1em 0;
+        min-width: 10em;
+    }
+
+    .lines{
+        display: block;
+    }
+
+    .active{
+        position: fixed;
+        top: 4em;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-color: #333;
+    }
+
+    .hero{
+        padding: 0 2em;
+        align-items: center;
+    }
+
+    .hero h1{
+        font-size: 3.2rem;
+    }
+    
+    .hero p{
+        font-size: 1.2rem;
+        margin-bottom: 2em;
+    }
+    
+    .hero a{
+        padding: 0.5em 1.2em;
+        font-size: 1rem;
+    }
+
+    .cards{
+        padding: 4em 2em;
+    }
+
+    .contact h3{
+        font-size: 1.8rem;
+    }
+    
+    .contact p{
+        margin: 1em 0 2.2em;
+        font-size: 1rem;
+    }
+
+    .contact a{
+        font-size: 1rem;
+    }
+
+    footer{
+        padding: 0 2em;
+    }
+
+    footer ion-icon{
+        font-size: 1.6rem;
+    }
+
+    footer p{
+        font-size: 0.8rem;
+    }
+}
+
+@media(max-width: 500px){
+    .hero h1{
+        font-size: 2.6rem;
+    }
+    
+    .hero p{
+        font-size: 1rem;
+    }
+    
+    .hero a{
+        font-size: 0.9rem;
+    }
+
+    .contact h3{
+        font-size: 1.6rem;
+    }
+    
+    .contact p, .contact a{
+        font-size: 0.9rem;
+    }
+
+    footer{
+        flex-direction: column;
+    }
+
+    footer .icons{
+        display: flex;
+        justify-content: center;
+        margin: 1em 0;
+    }
+
+    footer p{
+        margin: 0 0 1em;
+    }
+}
+
+@media(max-width: 425px){
+    header, .hero, .contact .content, footer{
+        padding: 0 1em;
+    }
+
+    .hero h1{
+        font-size: 2rem;
+    }
+    
+    .hero p{
+        font-size: 0.8rem;
+    }
+
+    .cards{
+        padding: 4em 1em;
+    }
+}
+.video {
+    display: flex;
+    justify-content: center;
+  }
+   
+  .video iframe {
+    max-width: 720px;
+    width: 80%;
+    margin-bottom: 40px;
+  }
