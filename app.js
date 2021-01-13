@@ -1,8 +1,17 @@
-const lines = document.querySelector('.lines');
-const menu = document.querySelector('nav ul');
+const mainMenu = document.querySelector('.mainMenu');
+const closeMenu = document.querySelector('.closeMenu');
+const openMenu = document.querySelector('.openMenu');
 
-lines.addEventListener('click', toggleMenu);
 
-function toggleMenu(){
-    menu.classList.toggle('active');
+
+
+openMenu.addEventListener('click',show);
+closeMenu.addEventListener('click',close);
+
+function show(){
+    mainMenu.style.display = 'flex';
+    mainMenu.style.top = '0';
+}
+function close(){
+    mainMenu.style.top = '-100%';
 }
